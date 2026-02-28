@@ -14,9 +14,9 @@ import telebot
 
 # --- Configuración ---
 api_url = 'https://api.telegram.org/bot7126648310:AAElFwf_BRIDXXFv3bCMfCmKEBNR_Rfilc8/sendMessage'
-number = '+584123889230'
-api_id = '37737737'
-api_hash = 'e3080a899bfb84e5e98b2947fb9e5123'
+number = os.getenv("PHONE_NUMBER")
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
 images_url = [
     'https://i.pinimg.com/736x/4c/e0/6f/4ce06fcebb0a04d909aa1576ec95873f.jpg',
     'https://i.pinimg.com/736x/77/5c/cf/775ccf064684a7ea0f886b4a47fd23aa.jpg',
@@ -25,8 +25,8 @@ images_url = [
     'https://i.pinimg.com/736x/bb/95/bc/bb95bc1086d690e9be03b31e18d15a29.jpg'
 ]
 
-CHANNEL_ID = -1003472563721 # Este es el canal donde TU BOT PUBLICARÁ los resultados
-TOKEN = '8534540936:AAHShJ4bQ8PXOKJw1Nmpw5_oFEbbOHvCKE4'
+CHANNEL_ID = int(os.getenv("CHANNEL_ID")) # Este es el canal donde TU BOT PUBLICARÁ los resultados
+TOKEN = os.getenv("BOT_TOKEN")
 
 # Inicializamos el bot de telebot aquí
 bot = telebot.TeleBot(TOKEN)
