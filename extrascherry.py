@@ -7,6 +7,7 @@ import asyncio
 import aiohttp 
 import collections 
 import datetime 
+import os
 
 # Importamos los tipos de botones de telebot correctamente
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
